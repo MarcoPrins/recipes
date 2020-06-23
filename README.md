@@ -1,24 +1,13 @@
-# README
+# Recipes portal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+View a list of recipes and click on any recipe for details!
 
-Things you may want to cover:
+## Set up
 
-* Ruby version
+* Ensure [Docker compose](https://docs.docker.com/compose/) is installed
+* Clone this repository
+* Build the container with `docker-compose build`
 
-* System dependencies
+## Usage
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run this app, run `docker-compose up`
