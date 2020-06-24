@@ -11,4 +11,5 @@ View a list of recipes and click on any recipe for details!
 
 ## Usage
 
-To run this app, run `docker-compose up`
+* To run this app, run `docker-compose up` and navigate to http://localhost:3000
+* To run tests, run `docker-compose run web rspec`
