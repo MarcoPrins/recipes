@@ -4,5 +4,9 @@ web:
     - .:/app
   ports:
     - "3000:3000"
+  env_file:
+    - .env
   environment:
-    RAILS_ENV: development
+    - RAILS_ENV
+    - CONTENTFUL_ACCESS_TOKEN
+    - CONTENTFUL_SPACE_ID
