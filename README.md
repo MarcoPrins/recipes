@@ -2,7 +2,7 @@
 
 View a list of recipes and click on any recipe for details!
 
-## Set up
+## Setting up on your local machine
 
 * Ensure [Docker compose](https://docs.docker.com/compose/) is installed
 * Clone this repository
