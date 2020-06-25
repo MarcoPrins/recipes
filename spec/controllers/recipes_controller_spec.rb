@@ -5,19 +5,14 @@ require 'rails_helper'
 describe RecipesController, type: :controller do
   describe 'GET index' do
     it 'fetches data from contentful' do
-      expect_any_instance_of(Contentful::Client).to(
-        receive(:entries).with(content_type: 'recipe'))
-        .and_return([])
-
+      expect(Contentful::Recipe).to(receive(:all)).and_call_original
       get :index
     end
   end
 
   describe 'GET show' do
     it 'fetches data from contentful' do
-      expect_any_instance_of(Contentful::Client).to(
-        receive(:entry).with('test-id'))
-
+      expect(Contentful::Recipe).to(receive(:find).with('test-id')).and_call_original
       get :show, params: { id: 'test-id' }
     end
   end
