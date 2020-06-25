@@ -1,0 +1,15 @@
+<div class="col-sm-6">
+  <div class="card mb-3">
+    <%= render partial: 'image', locals: { recipe: listing } %>
+
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= listing.fields[:title] %>
+      </h5>
+
+      <p class="card-text">
+        <%= link_to 'View this recipe', recipe_path(listing.id) %>
+      </p>
+    </div>
+  </div>
+</div>

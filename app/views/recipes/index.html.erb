@@ -1,0 +1,7 @@
+<h1 class="mb-3">All Recipes</h1>
+
+<div class="row">
+  <% @recipes.each do |recipe| %>
+    <%= render partial: 'listing', object: recipe %>
+  <% end %>
+</div>
