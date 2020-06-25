@@ -6,6 +6,6 @@ class Contentful::Recipe < ContentfulModel::Base
   has_one :chef, class_name: 'Contentful::Chef'
 
   def photo_url
-    photo.fields[:file].url
+    photo.fields.try(:[], :file)&.url
   end
 end
