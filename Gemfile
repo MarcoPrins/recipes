@@ -5,7 +5,8 @@ ruby '2.7.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'contentful'
+gem 'contentful', '>= 2.15.3'
+gem 'contentful_model', '>= 1.3.0'
 gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
