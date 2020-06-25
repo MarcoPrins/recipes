@@ -12,20 +12,18 @@
   <div class="col col-lg-6">
     <h1 class="mb-3"><%= @recipe.title %></h1>
 
-    <% if @recipe.fields[:chef].present? %>
-      <i class="chef-name">by <%= @recipe.fields[:chef].fields[:name] %></i>
+    <% if @recipe.chef&.name.present? %>
+      <i class="chef-name">by <%= @recipe.chef&.name %></i>
     <% end %>
 
-    <% if @recipe.fields[:tags].present? %>
-      <% @recipe.fields[:tags].each do |tag| %>
-        <span class="badge badge-light">
-          <%= tag.fields[:name] %>
-        </span>
-      <% end %>
+    <% (@recipe.tags || []).each do |tag| %>
+      <span class="badge badge-light">
+        <%= tag.name %>
+      </span>
     <% end %>
 
     <p class="mt-3">
-      <%= @recipe.fields[:description] %>
+      <%= @recipe.description %>
     </p>
   </div>
 </div>

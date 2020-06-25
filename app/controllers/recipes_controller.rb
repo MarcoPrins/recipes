@@ -2,11 +2,11 @@
 
 class RecipesController < ApplicationController
   def index
-    @recipes = contentful.entries(content_type: 'recipe')
+    @recipes = Contentful::Recipe.all.load
   end
 
   def show
-    @recipe = contentful.entry(show_params[:id])
+    @recipe = Contentful::Recipe.find(show_params[:id])
   end
 
   private
