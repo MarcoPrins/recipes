@@ -10,13 +10,14 @@ gem 'contentful_model', '>= 1.3.0'
 gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
-gem 'sqlite3', '~> 1.4'
+gem 'pg', '>= 1.2.3'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 4.0.0'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
